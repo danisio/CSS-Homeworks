@@ -1,0 +1,48 @@
+﻿body {
+    background-color: #A9A9A9;
+}
+
+header {
+    color: #FBFBD2;
+    font-size: 1.5em;
+}
+
+nav a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+#topHeader {
+    text-align: center;
+}
+
+#bottomFooter {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+footer:not(#bottomFooter) {
+    font-size: 0.8em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li:last-child {
+    text-decoration: underline;
+}
+
+.current {
+    background-color: #D3D3D3;
+}

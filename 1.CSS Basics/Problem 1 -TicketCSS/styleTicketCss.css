@@ -1,0 +1,57 @@
+﻿body {
+    background-color: #595959;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #A9AEAA;
+}
+
+dl {
+    width: 350px;
+    overflow: hidden;
+}
+
+dt {
+    float: left;
+    width: 40%;
+    height: 40px;
+    font-style: italic;
+    color: #F5E0D2;
+}
+
+dd {
+    height: 40px;
+}
+
+.secondDD {
+    margin-left: 140px;
+}
+
+.whiteText {
+    color: #F4E5AC;
+}
+
+.purpleText {
+    color: #A9AEAA;
+}
+
+.orangeText {
+    color: #DA692C;
+}
+
+#redText {
+    color: red;
+    font-weight: bold;
+    position: relative;
+    top: -0.8em;
+}
+
+#whiteText2 {
+    color: #F4E5AC;
+}
+
+#imageDot {
+    width: 15px;
+    height: 15px;
+}
