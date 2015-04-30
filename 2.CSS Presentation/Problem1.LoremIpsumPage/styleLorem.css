@@ -1,0 +1,12 @@
+﻿body {
+    color: #0094ff;
+    font-family:Consolas, 'Times New Roman';
+}
+
+p:first-line{
+    font-weight:bold;
+}
+
+p:first-letter {
+    font: 48px Edwardian Script ITC;
+}
