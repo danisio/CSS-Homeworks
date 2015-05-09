@@ -1,0 +1,116 @@
+﻿body, div, header, p, form, input, article, img, h1, a {
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    width: 660px;
+    height: 300px;
+}
+
+    div ::-webkit-input-placeholder {
+        color: black;
+    }
+
+    div :-moz-placeholder {
+        /* Firefox 18- */
+        color: black;
+    }
+
+    div ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: black;
+    }
+
+    div :-ms-input-placeholder {
+        color: black;
+    }
+
+    div > header {
+        height: 50px;
+        background: #3b3b3b;
+        /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNiM2IzYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgyJSIgc3RvcC1jb2xvcj0iIzNiM2IzYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyNDI0MjQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top, #3b3b3b 0%, #3b3b3b 82%, #242424 100%);
+        /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b3b3b), color-stop(82%, #3b3b3b), color-stop(100%, #242424));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #3b3b3b 0%, #3b3b3b 82%, #242424 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #3b3b3b 0%, #3b3b3b 82%, #242424 100%);
+        /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #3b3b3b 0%, #3b3b3b 82%, #242424 100%);
+        /* IE10+ */
+        background: linear-gradient(to bottom, #3b3b3b 0%, #3b3b3b 82%, #242424 100%);
+        /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b3b3b', endColorstr='#242424',GradientType=0 );
+        /* IE6-8 */
+        padding: 15px 0 0 10px;
+        border: 1px solid hidden;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+        div > header img {
+            width: 40px;
+            height: 47px;
+            float: left;
+            margin-top: -10px;
+            margin-right: 20px;
+        }
+
+        div > header p {
+            float: left;
+            color: #FFFFFF;
+            font-size: 1.4em;
+            margin-right: 15px;
+        }
+
+        div > header form input {
+            padding-left: 10px;
+            margin-right: 25px;
+            height: 18px;
+            width: 135px;
+            vertical-align: middle;
+        }
+
+            div > header form input[type=submit] {
+                width: 56px;
+                height: 28px;
+                background: url(images/buttonGo.png);
+                background-repeat: no-repeat;
+                border: none;
+                margin-right: 0;
+            }
+
+    div article {
+        background-color: #3B3B3B;
+        padding: 15px 50px 10px 15px;
+        border: 1px solid hidden;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+        div article h1 {
+            color: #F5D325;
+            font-weight: normal;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        div article p {
+            color: #A3A3A3;
+            line-height: 20px;
+        }
+
+        div article a {
+            text-decoration: none;
+            color: white;
+        }
+
+            div article a:hover {
+                text-decoration: underline;
+            }
+
+/*# sourceMappingURL=style.css.map */
