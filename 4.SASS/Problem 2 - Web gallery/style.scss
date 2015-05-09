@@ -1,0 +1,34 @@
+﻿body, div, img, a {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    div#small {
+        margin: 10px;
+        margin-left: 150px;
+
+        a {
+            margin: 5px;
+
+            img {
+                width: 150px;
+                height: 100px;
+            }
+        }
+    }
+
+    div#big {
+        margin-left: 155px;
+
+        img {
+            width: 800px;
+            height: 600px;
+            display: none;
+
+            &:target {
+                display: block;
+            }
+        }
+    }
+}

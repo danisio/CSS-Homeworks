@@ -1,0 +1,323 @@
+﻿//colors
+$white: white;
+$color_mauve_approx: #d392fe;
+$color_electric_violet_approx: #911df0;
+$color_eminence_approx: #603382;
+$color_lavender_approx: #b35ef3;
+$color_fuchsia_blue_approx: #8949b9;
+$color_honey_flower_approx: #51197d;
+$color_shady_lady_approx: #a8a8a8;
+$color_lavender_90_approx: rgba(179, 94, 243, 0.9);
+$black: black;
+$color_perfume_approx: #d8b8fc;
+$color_silver_chalice_approx: #aaaaaa;
+$color_celeste_approx: #cccccc;
+
+//fonts
+$font_0: normal Arial;
+$font_1: Consolas;
+$font_2: Lucida Console;
+$font_3: DejaVu Sans Mono;
+$font_4: monospace;
+
+//urls
+$url_0: url(images/li-dot.png);
+
+//@extend-elements
+%extend_1 {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+%extend_2 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.clearfix {
+    zoom: 1;
+
+    &:after {
+        @extend %extend_1;
+        clear: both;
+    }
+
+    &:before {
+        @extend %extend_1;
+    }
+}
+
+@mixin border($pixel, $type, $color, $radius: 0) {
+    border: $pixel $type $color;
+    border-radius: $radius;
+}
+
+@mixin gradient($from-col, $middle-col, $to-col, $from-pos, $middle-pos, $to-pos) {
+    background: $from-col;
+    background: -moz-linear-gradient(top, $from-col $from-pos, $middle-col $middle-pos, $to-col $to-pos);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop($from-pos,$from-col), color-stop($middle-pos,$middle-col), color-stop($to-pos,$to-col));
+    background: -webkit-linear-gradient(top, $from-col $from-pos,$middle-col $middle-pos,$to-col $to-pos);
+    background: -o-linear-gradient(top, $from-col $from-pos,$middle-col $middle-pos,$to-col $to-pos);
+    background: -ms-linear-gradient(top, $from-col $from-pos,$middle-col $middle-pos,$to-col $to-pos);
+    background: linear-gradient(to bottom, $from-col $from-pos,$middle-col $middle-pos,$to-col $to-pos);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='{$from-col}', endColorstr='{$to-col}',GradientType=0 );
+}
+
+header, section, footer, article, h1, h2, h3, h4, h5, h6, input, button, label, p, fieldset, nav, ul, li, a, span, strong, em {
+    @extend %extend_2;
+}
+
+body {
+    @extend %extend_2;
+    display: block;
+    font: 14px $font_0;
+    color: $white;
+    @include gradient($color_mauve_approx,$color_electric_violet_approx, $color_electric_violet_approx, 0, 22%, 100%);
+
+    header {
+        padding: 25px 15px 5px 15px;
+
+        nav {
+            zoom: 1;
+            display: inline-block;
+            width: 75%;
+            margin: 20px;
+            padding: 12px;
+            @include border(2px, solid, $color_honey_flower_approx, 15px);
+
+            ul {
+                li {
+                    float: left;
+                    margin: 0;
+
+                    ul {
+                        &.sub-nav-list {
+                            zoom: 1;
+                            position: absolute;
+                            display: none;
+                            background-color: $color_lavender_90_approx;
+                            border-radius: 5px;
+
+                            @extend .clearfix;
+                        }
+
+                        li {
+                            float: none;
+                            margin: 0 15px;
+                            padding: 10px 0;
+                            border-bottom: 1px solid $color_honey_flower_approx;
+
+                            &:last-of-type {
+                                border-bottom: none;
+                            }
+
+                            > a {
+                                font-size: 1.2em;
+                                color: $white;
+                            }
+                        }
+                    }
+
+                    a {
+                        text-decoration: none;
+                        padding: 0 10px;
+                        color: $white;
+                        font: 1.4em $font_0;
+
+                        &.selected {
+                            font-weight: bold;
+                        }
+                    }
+
+                    &:hover > a {
+                        text-decoration: underline;
+                        color: $color_shady_lady_approx;
+
+                        + ul {
+                            display: block;
+                        }
+                    }
+                }
+
+                @extend .clearfix;
+
+                &.nav-list {
+                    list-style-type: none;
+                }
+            }
+
+            @extend .clearfix;
+        }
+
+        div#header-container {
+            @extend .clearfix;
+
+            div {
+                &#logo-container {
+                    float: left;
+                    position: relative;
+                }
+
+                &#reg-form-container {
+                    float: right;
+                    position: relative;
+                    right: 5%;
+                    top: 50%;
+
+                    div {
+                        text-align: right;
+
+                        label {
+                            width: 50px;
+                            margin: 5px;
+                        }
+
+                        input {
+                            width: 130px;
+                            @include border(1px, solid, $color_eminence_approx, 10px);
+                            padding: 2px 5px;
+                            margin: 5px;
+                            background-color: $color_lavender_approx;
+                        }
+                    }
+
+                    button {
+                        font-weight: bold;
+                        @include border(1px, outset, $color_eminence_approx, 10px);
+                        border-top-color: $white;
+                        border-left-color: $white;
+                        padding: 5px 8px;
+                        background-color: $color_lavender_approx;
+                        color: $white;
+
+                        &:hover {
+                            background-color: $color_fuchsia_blue_approx;
+                            border-style: inset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section {
+        width: 75%;
+        float: left;
+        color: $black;
+
+        @extend .clearfix;
+
+        article {
+            margin: 20px;
+            padding: 20px;
+            @include border(1px, solid, $color_honey_flower_approx, 20px);
+            display: block;
+            color: $white;
+
+            header {
+                background: none;
+                padding: 5px;
+
+                h1 {
+                    font-size: 1.4em;
+                    padding: 0;
+                }
+            }
+
+            footer {
+                padding: 5px;
+
+                p {
+                    font-size: 16px;
+                    text-align: right;
+                    font-weight: normal;
+                    margin-top: 10px;
+
+                    time {
+                        font-family: $font_1, $font_2, $font_3, $font_4;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $color_perfume_approx;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    aside {
+        float: left;
+        width: 20%;
+        margin: 20px;
+
+        @extend .clearfix;
+
+        > ul {
+            list-style-type: none;
+
+            > li {
+                margin: 15px 0;
+                padding: 15px;
+                @include border(1px, solid, $color_honey_flower_approx, 5px);
+
+                h2 {
+                    font-size: 1.1em;
+                    font-weight: bold;
+                }
+
+                p {
+                    margin: 10px 5px;
+                    font-size: 14px;
+
+                    a {
+                        color: $color_silver_chalice_approx;
+                        text-decoration: none;
+                    }
+
+                    strong {
+                        color: $color_celeste_approx;
+                        font-weight: bold;
+                        font-style: normal;
+                    }
+
+                    em {
+                        color: $color_celeste_approx;
+                        font-weight: normal;
+                        font-style: italic;
+                    }
+                }
+
+                ul {
+                    list-style-type: none;
+                    margin: 10px 0;
+
+                    li {
+                        margin: 5px 0 0 10px;
+                        background: $url_0 no-repeat;
+                        background-position: 0 50%;
+                        padding-left: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        clear: both;
+        padding: 15px 0 25px 0;
+
+        p {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+}
